@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3, 
+  "name": "Foco nos Estudos",
+  "version": "1.0",
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["*://*.facebook.com/*", "*://*.instagram.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [ { "matches": ["https://*.instagram.com/*", "https://*.facebook.com/*", "https://*.twitter.com/*"], "js": ["content_script.js"] }],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+
